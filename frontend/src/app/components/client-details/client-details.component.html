@@ -1,0 +1,9 @@
+<!-- src/app/components/client-details/client-details.component.html -->
+<div *ngIf="client">
+  <h2>Client Details</h2>
+  <p><strong>ID:</strong> {{ client.id }}</p>
+  <p><strong>Name:</strong> {{ client.name }}</p>
+  <p><strong>Email:</strong> {{ client.email }}</p>
+  <p><strong>Phone Number:</strong> {{ client.phoneNumber }}</p>
+  <button routerLink="/clients">Back to List</button>
+</div>

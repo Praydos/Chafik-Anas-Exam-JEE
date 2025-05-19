@@ -41,9 +41,11 @@ public class ClientController {
                 .map(Mapper::mapToClientDTO)
                 .collect(Collectors.toList());
     }
+    @DeleteMapping("/{id}")
+    public void deleteClient(@PathVariable Long id) {
+        clientService.deleteClient(id);
+
+    }
+
 }
 
-//    @DeleteMapping("/{id}")
-//    public void deleteClient(@PathVariable Long id) {
-//        clientService.deleteClient(id);
-//    }
