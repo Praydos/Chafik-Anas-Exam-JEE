@@ -2,13 +2,15 @@ package org.sid.exam.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import java.util.Date;
+import org.sid.exam.enums.StatutCredit;
+
+import java.util.*;
 
 @Data
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "credit_type", discriminatorType = DiscriminatorType.STRING)
-public abstract class Credit {
+public  class Credit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
